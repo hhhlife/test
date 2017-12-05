@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <link rel="stylesheet" href="css/base.css">
+    <title></title>
+
+</head>
+<body>
+<div class="uk-box uk-head"></div>
+<div class="uk-box">
+    <div class="uk-nav ">
+        <ul class="uk-navleft uk-nav-a">
+            <li>
+                <a href="#">a</a>
+                <ul class="uk-subnav-b">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">b</a>
+                <ul class="uk-subnav-b">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">c</a>
+                <ul class="uk-subnav-b">
+                    <li>1</li>
+                    <li>2</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">d</a>
+                <ul class="uk-subnav-b">
+                    <li>1</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">e</a>
+                <ul class="uk-subnav-b">
+                    <li>2</li>
+                </ul>
+            </li>
+        </ul><!--uk-nav-a-->
+    </div><!--uk-nav-->
+    <div class="uk-hidemenu"><a id="uk-menu-trigger" href="javascript:void(0)"><img src="images/menu.png" ></a></div>
+    <div class="uk-content "></div>
+
+</div><!--uk-box-->
+
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        $('#uk-menu-trigger').click(function () {
+            if (!$('.uk-nav').hasClass('uk-offleft0'))
+            {
+                $('.uk-hidemenu,.uk-content').addClass('uk-offleft80');
+                $('.uk-nav').addClass('uk-offleft0');
+
+            } else {
+                $('.uk-nav').removeClass('uk-offleft0');
+                $('.uk-content, .uk-hidemenu').removeClass('uk-offleft80');
+                $('.uk-content, .uk-hidemenu').removeClass('uk-offleft240');
+            }0
+1        });
+
+
+        $('.uk-nav-a li').click(function(){
+            if($(this).children('ul').hasClass('uk-offleft80'))
+            {
+                $('.uk-nav-a li').children('ul').removeClass('uk-offleft80');
+                $('this').children('ul').addClass('uk-offleft80');
+                $('.uk-hidemenu,.uk-content').addClass('uk-offleft240');
+            }
+            else{
+                $('this').children('ul').removeClass('uk-offleft80');
+                $('.uk-hidemenu,.uk-content').removeClass('uk-offleft240');
+            }
+
+
+        })
+
+
+
+    });
+</script>
+
+</body>
+</html>
